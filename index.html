@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Rendas CLT vs. PJ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container"> 
+        <header class="calc-header">
+            <h1>Comparador de Rendas CLT vs. PJ</h1>
+            <p>Descubra seu valor líquido real após impostos e encargos.</p>
+        </header>
+
+        <div class="calculator-card"> 
+            
+            <div id="tab-selector" class="tab-selector">
+                <button id="btn-tab-clt" class="tab-btn active">Regime CLT</button>
+                <button id="btn-tab-pj" class="tab-btn">Regime PJ</button>
+            </div>
+
+            <div class="form-content">
+                <div id="form-clt" class="tab-pane active">
+                    <h2>Cálculo CLT (Consolidação das Leis do Trabalho)</h2>
+                    <div class="form-group">
+                        <label for="salario-bruto">Salário Bruto Mensal (R$):</label>
+                        <input type="number" id="salario-bruto" placeholder="Ex: 4000.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="num-dependentes">Número de Dependentes (IRRF):</label>
+                        <input type="number" id="num-dependentes" value="0" min="0">
+                    </div>
+                    <button id="calcular-clt" class="calc-btn">Calcular Descontos CLT</button>
+                </div>
+
+                <div id="form-pj" class="tab-pane" style="display: none;">
+                    <h2>Cálculo PJ (Pessoa Jurídica)</h2>
+                    <div class="form-group">
+                        <label for="regime-pj">Regime Tributário:</label>
+                        <select id="regime-pj">
+                            <option value="simples">Simples Nacional (6% Serviços)</option>
+                            <option value="presumido">Lucro Presumido (32% Serviços)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="faturamento-bruto">Faturamento Bruto Mensal (R$):</label>
+                        <input type="number" id="faturamento-bruto" placeholder="Ex: 10000.00">
+                    </div>
+                    <button id="calcular-pj" class="calc-btn">Calcular Impostos PJ</button>
+                </div>
+            </div>
+            
+            <div id="relatorio" class="report-area">
+                </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
